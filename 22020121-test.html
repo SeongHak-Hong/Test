@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2022-01-21 test</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+    /* position */
+    .fixed {position: fixed;}
+
+    /* display */
+    .flex {display: flex;}
+
+    /* flex */
+    .flex-direction-column {flex-direction: column;}
+    .justify-content-center {justify-content: center;}
+    .justify-content-end {justify-content: end;}
+    .align-i-center {align-items: center;}
+    .space-between {justify-content: space-between;}
+    .flex-nowrap {flex-wrap: nowrap;}
+    .align-i-end {align-items:flex-end;}
+
+    * {
+      padding:0;
+      margin:0;
+      color:#262626;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    body {
+      width:100vw;
+      height:100vh;
+    }
+    #container1, #container2 {
+      width:100%;
+      height:100%;
+    }
+    #container1 {
+      background-color: aliceblue;
+    }
+    #container2 {
+      background-color:oldlace;
+    }
+   
+    .wrap {
+      width:90%;
+      height:90%;
+      padding: 3rem 3rem;
+      box-sizing: border-box;
+    }
+    /* 타이틀 */
+    #title {
+      width:100%;
+      height:5%;
+      margin-bottom:2rem;
+      text-indent: 1rem;
+    }
+
+    /* 퀴즈랩 */
+    #quiz1, #quiz2 {
+      width:100%;
+      height:max-content;
+      box-sizing: border-box;
+    }
+
+    /* 이미지 */
+    #img1, #img2 {
+      width:70%;
+      height:34.875rem;
+      border-radius: 2rem;
+      box-shadow: 0.5rem 0.5rem 1rem rgba(104, 106, 138, 0.42);
+      overflow: hidden;
+    }
+    #img1 img, #img2 img {
+      width:100%;
+    }
+
+
+    /* 텍스트 */
+    #text1, #text2 {
+      width:25%;
+      box-sizing: border-box;
+      border-radius: 1.25rem;
+    }
+    #text1 > *, #text2 > * {
+      font-size:.75rem;
+      line-height: 1.6;
+      font-weight: 300;
+      text-align: end;
+    }
+    #text1 > div ~ div {
+      margin-top:3rem;
+    }
+    #text2 > div ~ div {
+      margin-top: 2rem;
+    }
+    #text1 p, #text2 p {
+      text-indent: .5rem;
+      text-align: justify;
+      margin-top:.12rem;
+    }
+
+    footer {
+      bottom:1.5rem;
+      right:1.5rem;
+      color:#504a4a
+    }
+  </style>
+</head>
+<body>
+  <div id="container1" class="flex justify-content-center align-i-center">
+    <div id="q1-wrap" class="wrap flex flex-nowrap flex-direction-column">
+      <div id="title" class="flex align-i-end">
+        <span>Q. 계획 중인 컨텐츠 작업물에 대한 시장흐름에 대한 조사를 진행하시오.</span>
+      </div>
+      <div id="quiz1" class="flex space-between">
+        <div id="img1">
+          <img src="./img/Screenshot 2022-01-21 at 14.35.02.jpg" alt="screenshot">
+        </div>
+        <div id="text1" class="flex flex-direction-column justify-content-end">
+          <div>
+            <span>- 수집한 웹서비스의 공통점 및 차이점 분류</span>
+            <p>풀페이지 사이트이고, 배경음악을 재생할 수 있는 뮤직플레이어가 있다. 또한, 메인컨텐츠에 텍스트를 최대한 줄이고, 이미지에 힘을 줬다.</p>
+          </div>
+          <div>
+            <span>- 수집한 웹서비스의 비즈니스 모델 점검</span>
+            <p>스크롤 하면 벌이 숲을 돌아다니면서 숲 곳곳에 있는 신상품을 소개시켜주는데 애니메이션이 화려해서 상품보다는 웹 자체에 관심이 더 쏠릴 것 같다. 패션 브랜드 사이트를 보면 상품의 판매보다는 온라인 전시회같은 느낌이 강한 곳이 많은데 수집한 사이트의 경우는 인터랙션은 훌륭하나 브랜드 이미지를 높이는 데는 글쎄...? 라는 생각이 든다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="container2" class="flex justify-content-center align-i-center">
+    <div id="q2-wrap" class="wrap flex flex-nowrap flex-direction-column">
+      <div id="title" class="flex align-i-end">
+        <span>Q. 수집한 레퍼런스(조사물, 스크랩)에 대한 체계적인 분석을 진행하시오.</span>
+      </div>
+      <div id="quiz2" class="flex space-between">
+        <div id="img2">
+          <img src="./img/Screenshot 2022-01-21 at 14.35.02.jpg" alt="screenshot">
+        </div>
+        <div id="text2" class="flex flex-direction-column justify-content-end">
+          <div>
+            <span>- 문항1의 조사자료에 대한 통상적인 문제점 요약</span>
+            <p>먼저 이미지와 애니메이션이 너무 화려해서 읽는 속도가 느리다. 우측 하단에 언어 선택란도 있는 것을 보면 global user의 사용을 생각하고 디자인한 것 같으나 여러 나라의 인터넷 환경을 고려한 것 같지 않다. 또한, 상품 위에 과도한 이펙트가 있어서 상품이 잘 보이지 않아 상품 판매·홍보를 위한 사이트라고 보기에는 부적합한 것 같다. .</p>
+          </div>
+          <div>
+            <span>- 조사자료와 제작자의 저작물과의 차별점 주장</span>
+            <p>같은 풀페이지 사이트이고, 전시에 관점을 두고 있지만, user의 사이트 방문 목적에서 확연히 다르다. 지브리 스튜디오의 작품을 보고 감명을 받은 사람들이 지브리에 대해 궁금해서 방문할 것이라고 예상했고, 스튜디오의 철학과 감성이 담긴 사이트를 만들어 방문자가 관람했던 작품 이외에 작품에도 관심을 가지기를 바랬다. 구매로 이어질 수 있도 말이다.</p>
+          </div>
+          <div>
+            <span>- 개선방향과 제작자 컨텐츠 작업물의 사용자 경험 최종 목적</span>
+            <p>앞서 말했듯이 단순히 작품 진열과 정보 제공을 위한 것이 아니라 또 다른 구매 접점을 만들어 주기 위한 사이트를 제작하는 것이다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="fixed">수강생 홍성학</footer>
+</body>
+</html>

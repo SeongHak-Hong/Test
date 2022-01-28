@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2022-01-21 test</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+    /* position */
+    .fixed {position: fixed;}
+
+    /* display */
+    .flex {display: flex;}
+
+    /* flex */
+    .flex-direction-column {flex-direction: column;}
+    .justify-content-center {justify-content: center;}
+    .justify-content-end {justify-content: end;}
+    .align-i-center {align-items: center;}
+    .space-between {justify-content: space-between;}
+    .flex-nowrap {flex-wrap: nowrap;}
+    .align-i-end {align-items:flex-end;}
+
+    * {
+      padding:0;
+      margin:0;
+      color:#262626;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    body {
+      width:100vw;
+      height:100vh;
+    }
+    #container1 {
+      width:100%;
+      height:100%;
+    }
+    #container1 {
+      background-color: aliceblue;
+    }
+   
+    .wrap {
+      width:90%;
+      height:max-content;
+      padding: 3rem 3rem;
+      box-sizing: border-box;
+    }
+    
+    /* 퀴즈랩 */
+    #quiz1 {
+      width:100%;
+      height:max-content;
+      box-sizing: border-box;
+    }
+
+    /* 이미지 */
+    #img1 {
+      width:70%;
+      height:37.875rem;
+      border-radius: 2rem;
+      box-shadow: 0.5rem 0.5rem 1rem rgba(104, 106, 138, 0.42);
+      overflow: hidden;
+    }
+    #img1 img {
+      width:100%;
+    }
+
+
+    /* 타이틀 */
+    #title {
+      width:100%;
+      text-indent: 1rem;
+      letter-spacing: -.025rem;
+    }
+    #title span {
+      font-size: 1.6rem;
+    }
+    /* 텍스트 */
+    #text1 {
+      width:25%;
+      box-sizing: border-box;
+      border-radius: 1.25rem;
+    }
+    #text1 > * {
+      font-size:.75rem;
+      line-height: 1.6;
+      font-weight: 300;
+      text-align: end;
+    }
+    #text1 > div ~ div {
+      margin-top:3rem;
+    }
+    #text1 p {
+      text-indent: .5rem;
+      text-align: justify;
+      margin-top:.12rem;
+    }
+    /* 푸터 */
+    footer {
+      bottom:1.5rem;
+      right:1.5rem;
+      color:#504a4a
+    }
+  </style>
+</head>
+<body>
+  <div id="container1" class="flex justify-content-center align-i-center">
+    <div id="q1-wrap" class="wrap flex flex-nowrap flex-direction-column">
+      <div id="quiz1" class="flex space-between">
+        <div id="img1">
+          <img src="./img/ghibli.jpg" alt="screenshot">
+        </div>
+        <div id="text1" class="flex flex-direction-column justify-content-end">
+          <div id="title" class="flex justify-content-end">
+            <span>Q. 나의 작업에 이유가 있는가?</span>
+          </div>
+          <div>
+            <span>- 훈련과 작업에 임하면서</span>
+            <p>자바스크립트를 배우기 전, 정적인 사이트를 만들면서 그저 사용자가 원하는 목적을 달성을 위해 디자인을 하면 된다고 생각했다. 하지만 DHTML을 배우면서 웹이 어떻게 변화하고 있는가를 보니 더 이상 편의기능만을 제공하는 웹이 아닌 저작자의 의도와 가치관까지 담을 수 있겠구나 생각했다. 일상에서 자주 들어가는 사이트들은 내 생활에 있어서 더할나위 없는 편의성을 제공하는 것은 맞지만 웹과 사용자의 상호작용이 되지 않으니 웹의 브랜딩 요소가 이미지, 영상에 국한되었다. 곧 다가올 DHTML의 시대엔 디자이너의 의도대로 사용자들의 사이트 접근 방식을 더 잘 지휘할 수 있게 되니 기대가 된다. 아직은 초짜인 나이지만 내가 디자인한 웹을 방문한 사람들에게 방문 목적의 니즈를 충족시키는 것은 물론이고, '행복'한 감정이 들게 하는 웹디자이너로 성장하고 싶다. 목적을 가지고 방문한 사람에게 행복을 준다면 그것만큼 좋은 브랜딩 이미지 전략이 있을까?라는 생각이다.</p>
+          </div>
+          <div>
+            <span>- 그렇다면 지금 하고 있는 작업에 대한 근거는?</span>
+            <p>현재 디자인하고 있는 사이트는 '지브리 스튜디오'라는 일본 애니메이션 제작사의 사이트다. '센과 치히로의 행방불명', '하울의 움직이는 성' 등을 탄생시킨 워낙 유명한 제작사이기에 제작사를 소개하는 전략보다는 상품을 중심으로 브랜딩하면 좋겠다고 생각했다. 지브리 스튜디오 사이트를 왜 찾을까?라는 이유를 생각하면 지브리의 작품을 보고서 감명을 받은 사람들이 들어올 것이 대부분일 것이라고 예상했다. 때문에 지브리 작품을 보고서 감명받은 방문자를 위해 사이트에 진입하면 영화가 시작되는 것처럼 인트로 페이드인,아웃 연출을 했다. 화면 구성 자체는 단순하고, 지브리 작품의 장면이 잘 보이도록 풀페이지로 만들었다. 풀페이지 사이트더라도 스크롤 하면 하단의 내용이 나오도록 구성하는 사이트가 많은데, 영화 스크린같은 연출을 위해 스크롤도 없앴다. 하단 좌측에 뮤직플레이어는 요즘 사이트에서 잘 사용하지 않지만, OST도 유명한 작품이 많은 지브리이기에 OST를 듣고 찾아보게 된 방문자를 위해 넣었다. 이 연출들은 모두 지브리의 또다른 작품을 보고 싶게 만들기 위한 전략적인 연출이다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="fixed">수강생 홍성학</footer>
+</body>
+</html>

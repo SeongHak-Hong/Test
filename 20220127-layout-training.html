@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>20220127-layout-training</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Permanent+Marker&display=swap');
+
+    /* display */
+    .flex {display: flex;}
+    .inline-block {display: inline-block;}
+    .none {display: none;}
+
+    /* position */
+    .absolute {position: absolute;}
+    .relative {position: relative;}
+    .fixed {position: fixed;}
+
+    /* flex */
+    .align-i-center {align-items: center;}
+    .justify-content-center {justify-content: center;}
+    .space-between {justify-content: space-between;}
+    .flex-direction-column {flex-direction: column;}
+
+    /* overflow */
+    .overflow-hidden {overflow: hidden;}
+
+    * {
+      padding:0;
+      margin:0;
+    }
+    body {
+      width:100vw;
+      height:100vh;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 300;
+      color:#262626;
+    }
+    /* 바디랩 */
+    #body-wrap {
+      width:100%;
+      height:100%;
+      overflow: hidden;
+    }
+    /* 섹션 */
+    #section1, #section2 {
+      width:100%;
+      height:100vh;
+    }
+    /* 컨테이너 */
+    #container1, #container2 {
+      width:max-content;
+      height:max-content;
+    }
+
+
+    /* ***섹션1*** */
+    #section1 {
+      background-color: aliceblue;
+    }
+    /* 컨테이너 */
+    #container1 {
+      height:50vh;
+    }
+    /* 아래상자, 윗상자 */
+    #over, #under {
+      width:50vw;
+      height:max-content;
+    }
+    /* 윗-왼상자, 아래상자 */
+    #left, #under {
+      width:20vw;
+      height:20vh;
+      background-color: azure;
+      box-shadow: 5px 5px 10px rgba(0,0,0,.18);
+      box-sizing: border-box;
+      border-radius: 1rem;
+      padding:.5rem;
+    }
+    /* 왼상자 */
+    #left {
+      z-index: 1;
+    }
+    #left span {
+      width:100%;
+      height:100%;
+      text-indent: 1rem;
+      line-height: 1.6;
+      font-size:6rem;
+      white-space: nowrap;
+      font-family: 'Permanent Marker', cursive;
+    }
+    /* 윗-오른상자 */
+    #right {
+      width:10vw;
+      height:10vh;
+      background-color: beige;
+      box-shadow: inset 0px 0px 15px rgba(153, 65, 13, 0.24);
+      box-sizing: border-box;
+      border-radius: 1rem;
+    }
+    /* 아랫상자 */
+    #under p {
+      text-indent: 1rem;
+      text-align: justify;
+      line-height: 1.6;
+    }
+    /* 페이저 */
+    #pager {
+      right:3rem;
+      top:50%;
+      transform: translateY(-50%);
+      width:5vw;
+      height:20vh;
+    }
+    .dot {
+      width:.6rem;
+      height:.6rem;
+      border-radius: 50%;
+      background-color: #262626;
+      cursor: pointer;
+    }
+
+
+
+    /* ***섹션2*** */
+    #section2 {
+      background-color:#fff;
+    }
+    #section2 h2 {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 3rem;
+      background: linear-gradient(to right, #002153, #cc1815);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom:1rem;
+    }
+    /* 막대기 */
+    #container2::before {
+      content:'';
+      width:.6rem;
+      height:20vh;
+      position: absolute;
+      left:-1rem;
+      top:0;
+      background-color: #002153;
+    }
+    /* 이미지 */
+    #image {
+      width:26vw;
+      height:max-content;
+    }
+    #image img {
+      width:100%;
+    }
+    /* 타이틀 */
+    #title {
+      width:50vw;
+      text-align: center;
+      font-size: 1.2rem;
+      margin:1rem 0;
+    }
+    /* 내용 */
+    #content {
+      width:50vw;
+      height:max-content;
+    }
+    #content p {
+      text-indent: 1rem;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+  <section id="section1" class="flex align-i-center justify-content-center flex-direction-column">
+    <h2 class="none">section1</h2>
+    <div id="container1" class="flex flex-direction-column space-between">
+      <div id="over" class="flex align-i-center space-between">
+        <div id="left" class="relative">
+          <span class="inline-block">Lorem ipsum</span>
+        </div>
+        <div id="right"></div>
+      </div>
+      <div id="under" class="overflow-hidden">
+        <p class="inline-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, animi! Suscipit iure at odio pariatur eveniet obcaecati odit, architecto praesentium dicta ex. Voluptatibus distinctio sint soluta id voluptate! Ullam, deleniti.
+        </p>
+      </div>
+      <div id="pager" class="fixed flex flex-direction-column space-between align-i-center">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </section>
+  <section id="section2" class="flex align-i-center justify-content-center flex-direction-column">
+    <h2>Amazing Disney!</h2>
+    <div id="container2" class="relative flex align-i-center flex-direction-column">
+      <div id="image">
+        <img src="https://jf-staeulalia.pt/img/other/50/collection-mickey-mouse-cartoon-30.jpg" alt="mickey">
+      </div>
+      <div id="text">
+        <div id="title">
+          <strong>mickey mouse</strong>
+        </div>
+        <div id="content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus quidem, autem repellat eligendi nemo non dolorum ipsa blanditiis in necessitatibus sapiente, vitae iste corrupti nobis doloribus quisquam incidunt doloremque?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

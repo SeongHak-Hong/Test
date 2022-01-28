@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>20220125-layout-training</title>
+</head>
+<body>
+  <div id="container">
+    <div class="inner"></div>
+    <div class="inner"></div>
+    <div class="inner"></div>
+  </div>
+  <script>
+    // body
+    const body = document.querySelector("body");
+    body.style.width = 100 + "vw";
+    body.style.height = 100 + "vh";
+    body.style.margin = 0;
+    body.style.padding = 0;
+    // container
+    const container = document.querySelector("#container");
+    container.style.display = "flex";
+    container.style.alignItems = "end";
+    container.style.width = 100 + "vw";
+    container.style.height = 100 + "vh";
+    container.style.background = "snow";
+    // inner
+    const inner = document.querySelectorAll(".inner");
+    for (let i = 0; i < 4; i++) {
+      inner[i].style.width = 20 + "%";
+      inner[i].style.display = "inline-block";
+      inner[0].style.height = 100 + "%";
+      inner[0].style.background = "tan";
+      inner[1].style.height = 70 + "%";
+      inner[1].style.background = "antiquewhite";
+      inner[2].style.height = 40 + "%";
+      inner[2].style.background = "ivory";
+    }   
+  </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* display */
+    .block {display: block;}
+    .flex {display: flex;}
+
+    /* flex */
+    .align-i-center {align-items: center;}
+    .justify-content-start {justify-content: start;}
+    .justify-content-end {justify-content: end;}
+    .justify-content-center {justify-content: center;}
+    .space-between {justify-content: space-between;}
+    .column {flex-direction: column;}
+
+
+    * {
+      padding:0;
+      margin:0;
+    }
+    body {
+      width:100vw;
+      height:100vh;
+    }
+    /* 네비 */
+    nav {
+      position: fixed;
+      left:2%;
+      top:5%;
+      width:7rem;
+      height:50rem;
+    }
+    nav ul {
+      list-style-type: none;
+      width:100%;
+      height:100%;
+    }
+    nav ul li {
+      flex:1;
+      width:100%;
+      background-color: antiquewhite;
+    }
+    nav ul li:nth-child(2n) {
+      background-color:snow;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color:#262626;
+      font-size:1.5rem;
+    }
+
+    /* 컨테이너(화면 100vh분할) */
+    .container {
+      width:100%;
+      height:100%;
+      padding: 0 10rem;
+      box-sizing: border-box;
+    }
+    #container1 {
+      background-color: burlywood;
+    }
+    #container2 {
+      background-color:rosybrown;
+    }
+
+    /* ***콘텐츠영역*** */
+    #contents-wrap {
+      padding:2rem;
+      box-sizing: border-box;
+      width:70%;
+      height:80%;
+      background-color:steelblue;
+    }
+    #left-wrap, #right-wrap {
+      width:45%;
+    }
+    #left-wrap div {
+      height:70%;
+      background-color: tan;
+    }
+    #right-wrap h1 {
+      text-transform: uppercase;
+    }
+    #right-wrap p {
+      font-size:1.5rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+  <!-- ***네비 영역*** -->
+  <nav class="flex align-i-center">
+    <ul class="flex align-i-center space-between column">
+      <li class="flex align-i-center justify-content-center">
+        <a href="#">home</a>
+      </li>
+      <li class="flex align-i-center justify-content-center">
+        <a href="#">about</a>
+      </li>
+      <li class="flex align-i-center justify-content-center">
+        <a href="#">news</a>
+      </li>
+      <li class="flex align-i-center justify-content-center">
+        <a href="#">contact</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- 화면1 -->
+  <div id="container1" class="container flex align-i-center justify-content-center"></div>
+  <!-- 화면2 -->
+  <div id="container2" class="container flex align-i-center justify-content-center">
+    <!-- ***콘텐츠영역*** -->
+    <div id="contents-wrap" class="flex space-between">
+      <!-- 콘텐츠-좌 -->
+      <div id="left-wrap" class="flex column justify-content-start">
+        <div></div>
+      </div>
+      <!-- 콘텐츠-우 -->
+      <div id="right-wrap" class="flex column justify-content-end">
+        <h1>title</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, dicta. Possimus nemo vel molestiae deserunt, ipsam voluptas ipsum! Est, praesentium. Temporibus vero quas omnis, cumque ex sequi officia exercitationem dolor!
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
